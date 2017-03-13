@@ -1,59 +1,67 @@
 <html>
-	<body>
-		<title>
-			Editable Grid in Javascript
-		</title>
-		<script src = "./Scripts/jquery-3.1.1.min.js"></script>
-		<script src="./Scripts/script.js"></script>	
-		<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" >
-		<script src="./bootstrap/js/bootstrap.min.js"></script>	
-		
-		<textarea placeholder="Table" id="TableTxtArea" rows="5" cols="50"></textarea>
-		</br>
-		<button type="button" class="btn btn-alert" id="btnGenerateColumn">GO</button>
-		
-		</br>
-		</br>
-		
-		<div id="inputControls">
-			<!-- <label>Name:</label> -->
-			<!-- <input type ="text" placeholder="Name" id="NameTxt"></input> -->
-			<!-- </br> -->
-			<!-- </br> -->
-			
-			<!-- <label>Gender:</label> -->
-			<!-- <input type ="text" placeholder="Gender" id="GenderTxt"></input> -->
-			<!-- </br> -->
-			<!-- </br> -->
-			
-			<!-- <label>Age:</label> -->
-			<!-- <input type ="text" placeholder="Age" id="AgeTxt"></input> -->
-			<!-- </br> -->
-			<!-- </br> -->
-		</div>
-			
-		<button type="submit" class="btn btn-primary" id="btnAddRow">Add Row</button>	
-		<button type="submit" class="btn btn-danger" id="btnOpenModal" data-toggle="modal" data-target="#myModal"> Add Column</button>
-		
-		<!-- Modal -->
-		<div id="myModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Add New Column</h4>
-					</div>
-					<div class="modal-body">
-						<label>Enter the New Column Name:</p>
-						<input type="text" id="modalTxt"></input>
-					</div>
-					<div class="modal-footer">
-					    <button type="button" class="btn btn-primary" id="btnAddColumn">Add</button>
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+   <body>
+      <title>
+         Editable Grid in Javascript
+      </title>
+      <script src = "./Scripts/jquery-3.1.1.min.js"></script>
+      <script src="./Scripts/script.js"></script>	
+      <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" >
+      <link rel="stylesheet" href="css/main.css"/>
+      <script src="./bootstrap/js/bootstrap.min.js"></script>	
+      <div class="container">
+         <div class = "row" style="margin-top:20px">
+            <div class="col-md-6" >
+               <img class ="img-responsive logo" src="Images\Markdown.jpg" alt="MarkDown Converter" style="height:120px">
+            </div>
+            <div class="col-md-6 text-right">
+               <h1 class="heading" >MarkDown Converter</h1>
+               <h3>Convert Table to MarkDown</h3>
+            </div>
+         </div>
+         <div class="row">
+            <div class ="col-md-12">
+               <hr class="horizontalRule"/>
+            </div>
+            <div class="col-md-4" id="divInput">
+               <textarea placeholder="Please enter the table in markdown format" id="TableTxtArea" rows="6" cols="40"></textarea>	
+            </div>
+            <div class="col-md-8" id="divTable" style="overflow:auto">
+               <table class="table table-responsive" id='tblData'> </table>
+            </div>
+         </div>
+         <div class="row" style="height:15%">
+            <div class="col-md-12">
+               <button type="button" class="btn btn-alert" id="btnGenerateColumn" style="margin-top:20px">Generate Table</button>
+            </div>
+         </div>
+         <div class="row" style="height:20%">
+            <div class ="col-md-2">
+               <button type="button" class="btn btn-primary" id="btnAddRow" >Add Row</button>	
+            </div>
+            <div class="col-md-2">
+               <button type="submit" class="btn btn-danger" id="btnOpenModal" data-toggle="modal" data-target="#myModal"> Add Column</button>
+            </div>
+         </div>
+         <!-- Modal -->
+         <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+               <!-- Modal content-->
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h4 class="modal-title">Add New Column</h4>
+                  </div>
+                  <div class="modal-body">
+                     <label>Enter the New Column Name:</p>
+                     <input type="text" id="modalTxt"></input>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-primary" id="btnAddColumn">Add</button>
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
 </html>
